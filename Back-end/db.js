@@ -1,5 +1,12 @@
-export const verifyEmail = () => {
-    setTimeout(function() {
-        window.location.href = '/HTML/emailVerificationLandingPage.html';
-    }, 3000);
-}   
+import { MongoClient } from 'mongodb';
+
+let client;
+
+export const initializeDbConnection = async () => {
+    client = await MongoClient.connect('mongodb://localhost:27017');
+}
+
+export const getDbConnection = dbName => {
+    const db = client.db(dbName);
+    return db;
+}

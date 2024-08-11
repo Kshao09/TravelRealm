@@ -1,0 +1,48 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Back-end services for TravelRealm, providing API endpoints for booking and tourism information.",
+  "main": "routing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node -r dotenv/config ./server.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kshao09/TravelRealm.git"
+  },
+  "keywords": [
+    "travel",
+    "website",
+    "booking",
+    "tourism"
+  ],
+  "author": "Kenny Shao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kshao09/TravelRealm/issues"
+  },
+  "homepage": "https://github.com/Kshao09/TravelRealm#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/node": "^7.25.0",
+    "babel-node": "^0.0.1-security",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.12.0",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "googleapis": "^140.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "nodemailer": "^6.9.14",
+    "stripe": "^16.7.0",
+    "uuid": "^10.0.0"
+  }
+}
