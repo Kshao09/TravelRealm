@@ -1,0 +1,19 @@
+.content-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+}

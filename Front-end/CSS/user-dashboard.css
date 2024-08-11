@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(49, 211, 228);
+}
+
+.info-container {
+    background-color: white;
+    width: 90%;
+    margin: 65px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-top {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#profilePic {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+#profilePic:hover {
+    transform: scale(1.2);
+}
+
+.navbar {
+    display: flex;
+    height: fit-content;
+    justify-content: space-evenly;
+    position: relative;
+    top: 0;
+    background-color: #387cc0;
+    color: #ECF0F1;
+    border-radius: 15px;
+}
+
+.navbar a {
+    padding: 4vh 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ECF0F1;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+.navbar a.active {
+    color: #E74C3C;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 126px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.userContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.leftSideContainer,
+.rightSideContainer {
+    padding: 2%;
+    background-color: #f2f2f2;
+}
+
+.leftSideContainer {
+    width: 68%;
+}
+
+.rightSideContainer {
+    width: 28%;
+}
+
+#world-map-kpi {
+    width: auto;
+    height: 42%;
+    border: 1px solid #aaa;
+    background-color: rgb(88, 191, 236);
+    padding: auto;
+    margin: auto;
+    margin-bottom: 2%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#weather {
+    width: auto;
+    height: 56%;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cityInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#weatherResults {
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    opacity: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#hotel-search {
+    width: auto;
+    height: 500px;
+    border: 1px solid #aaa;
+    padding: auto;
+    margin: auto;
+}
+
+.calendar {
+    background-color: #f2f2f2;
+    height: 40%;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+#weekdays,
+#days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#weekdays div,
+#days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#days div {
+    cursor: pointer;
+}
+
+.today {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+}
+
+#prev,
+#next {
+    border-radius: 50%;
+}
+
+.support {
+    background-color: #f2f2f2;
+    height: 58%;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: auto;
+    padding: 0.5em;
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #005f6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #003d4c;
+}
+
+.scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.scroll-top-button:hover {
+    background-color: #ccc;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-section {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,238 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .home-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #d4d4d4;
+  }
+  
+  section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #categories {
+    margin-bottom: 20px;
+  }
+  
+  #categories ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #categories ul li {
+    margin-right: 10px;
+  }
+  
+  #categories ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  #categories ul li a:hover {
+    color: #0056b3;
+  }
+  
+  .forum-post {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .forum-post:hover {
+    transform: scale(1.02);
+  }
+  
+  .forum-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .edit-content {
+    width: 95%;
+    height: 100px;
+    margin-top: 10px;
+  }
+  
+  .scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .scroll-top-button:hover {
+    background-color: #ccc;
+    transform: scale(1.1);
+  }
+  
+  .reactions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .comments {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 1rem;
+  }
+  
+  #new-post-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #new-post-username,
+  #new-post-category,
+  #new-post-content,
+  #new-post-image {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  #new-post-content {
+    height: 100px;
+    resize: none;
+  }
+  
+  #new-post-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  #new-post-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #007bff;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  
+  button:hover {
+    color: #0056b3;
+  }
+  
+  #commentBox {
+    width: 90%;
+    height: 100px;
+    border: 1px solid black;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  
+    section {
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+  
+    #new-post-container {
+      gap: 5px;
+    }
+  
+    #new-post-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }

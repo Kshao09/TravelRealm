@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(180, 180, 180);
+    margin: 0;
+    padding: 20px;
+}
+
+#container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.form-container.active {
+    display: block;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select[type="ethnicity"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #4cae4c;
+}
+
+#oauth-buttons {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container>div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.flex-container>div:last-child {
+    margin-right: 0;
+}

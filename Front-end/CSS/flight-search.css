@@ -1,0 +1,221 @@
+body {
+    background-color: #00c3ff;
+    margin: 0;
+    padding: 0;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+#search-flights {
+    border-radius: 15px;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-flights h2 {
+    margin-bottom: 1rem;
+}
+
+#flight-search-form-one-way {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#flight-search-form-round-trip {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input,
+button {
+    padding: 1em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#filters {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#filters h3 {
+    margin-top: 0;
+}
+
+#filters div {
+    margin-bottom: 10px;
+}
+
+#filters label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#filters input,
+#filters select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.flight-card {
+    background: white;
+    padding-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 1em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flight-card p {
+    margin: 0.5em 0;
+}
+
+.userBtnContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.compare-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.compare-button:hover {
+    background-color: #0056b3;
+}
+
+.scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.scroll-top-button:hover {
+    background-color: #ccc;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.page-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00c3ff;
+    color: white;
+    font-size: 14px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-button.active {
+    background-color: #0056b3;
+}
+
+.page-button:hover {
+    background-color: #0056b3;
+}
+
+#compare-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    padding-left: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#compare-list {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.add-to-cart-button {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.add-to-cart-button:hover {
+    background-color: #e0a800;
+}
+
+.remove-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}

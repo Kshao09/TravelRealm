@@ -1,0 +1,137 @@
+body {
+    background-color: #3bcbe7;
+}
+
+#flight-details,
+#car-details,
+#hotel-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+.flight,
+.hotel,
+.car {
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: center;
+}
+
+#booking-form {
+    background: lightgray;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+#booking-form h3 {
+    text-align: center;
+}
+
+#booking-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#booking-form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+#booking-form input,
+#booking-form button {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#booking-form button {
+    background: #00416A;
+    color: white;
+    cursor: pointer;
+}
+
+#booking-form button:hover {
+    background: #003366;
+}
+
+.scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.scroll-top-button:hover {
+    background-color: #ccc;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.button-container .btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container .btn:hover {
+    background-color: #0056b3;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-right: 10px;
+    width: auto;
+}
+
+.form-group input {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10px;
+}
+
+.form-group input:last-child {
+    margin-right: 0;
+}
