@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #00416A, #E4E5E6);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    position: sticky;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 22px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-links a::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease;
+  }
+  
+  .nav-links a:hover::before {
+    left: 0;
+  }
+  
+  .nav-links a:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    background: #fff;
+    height: 2px;
+    width: 25px;
+    margin-bottom: 5px;
+  }
+  
+  .hero {
+    background: url('../IMG/Travel.PNG') no-repeat center center/cover;
+    height: 90vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: heroAnimation 10s infinite alternate;
+  }
+  
+  @keyframes heroAnimation {
+    0% {
+      background-position: center top;
+    }
+  
+    100% {
+      background-position: center bottom;
+    }
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: textGlow 2s infinite alternate;
+  }
+  
+  @keyframes textGlow {
+    0% {
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    }
+  
+    100% {
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  .hero .btn {
+    background: #fff;
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+  }
+  
+  section {
+    padding: 2rem;
+    animation: sectionFadeIn 2s;
+  }
+  
+  @keyframes sectionFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #about {
+    background: #f9f9f9;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  #about h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #about ul {
+    list-style: disc;
+    margin-left: 2rem;
+  }
+  
+  #about ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  #contact {
+    background: #f1f1f1;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  #contact h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #contact ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  #contact ul li a {
+    color: #00416A;
+    text-decoration: none;
+  }
+  
+  #contact ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    animation: footerFadeIn 2s;
+  }
+  
+  .scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .scroll-top-button:hover {
+    background-color: #ccc;
+  }
+  
+  @keyframes footerFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }

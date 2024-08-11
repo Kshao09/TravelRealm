@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Travel Loyalty Program</title>
+    <link rel="stylesheet" href="../CSS/loyaltyProgram.css">
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button" data-translate="homeBtn">Home</a>
+    <div class="container">
+        <h1 data-translate="header">Travel Loyalty Program</h1>
+        <div class="tiers">
+            <div class="basic">
+                <h2 data-translate="basic">Basic</h2>
+                <h3 data-translate="perks">Perks</h3>
+                <p>Birthday travel voucher</p>
+            </div>
+            <div class="bronze">
+                <h2 data-translate="bronze">Bronze</h2>
+                <h3 data-translate="perks">Perks</h3>
+                <p>3% discount on bookings</p>
+                <p>Birthday travel voucher</p>
+            </div>
+            <div class="silver">
+                <h2 data-translate="silver">Silver</h2>
+                <h3 data-translate="perks">Perks</h3>
+                <p>5% discount on bookings</p>
+                <p>Birthday travel voucher</p>
+                <p>Priority customer service</p>
+            </div>
+            <div class="gold">
+                <h2 data-translate="gold">Gold</h2>
+                <h3 data-translate="perks">Perks</h3>
+                <p>8% discount on bookings</p>
+                <p>Birthday travel voucher</p>
+                <p>Priority customer service</p>
+                <p>Free room upgrades</p>
+            </div>
+            <div class="platinum">
+                <h2 data-translate="platinum">Platinum</h2>
+                <h3 data-translate="perks">Perks</h3>
+                <p>12% discount on bookings</p>
+                <p>Birthday travel voucher</p>
+                <p>Priority customer service</p>
+                <p>Free room upgrades</p>
+                <p>VIP lounge access</p>
+            </div>
+        </div>
+        <div class="points">
+            <h2>Your Points: <span id="points">0</span></h2>
+            <button id="pointsBtn">Earn Points Now</button>
+        </div>
+        <div class="membership-duration">
+            <h2>Membership Duration: <span id="membershipDuration">0 days</span></h2>
+        </div>
+        <div class="membership-status">
+            <h2>Membership Status: <span id="membership-status">Basic</span></h2>
+        </div>
+        <div class="progress-charts">
+            <h2>Points Progress</h2>
+            <select id="chartType">
+                <option value=""></option>
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <canvas id="dailyChart"></canvas>
+            <canvas id="monthlyChart"></canvas>
+            <canvas id="yearlyChart"></canvas>
+        </div>
+    </div>
+    <button id="scroll-top-button" class="scroll-top-button">↑</button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../JS/loyaltyProgram.js"></script>
+</body>
+
+</html>

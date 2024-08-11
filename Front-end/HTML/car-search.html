@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Car Search</title>
+    <link href="../CSS/car-search.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button">Home</a>
+    <div class="search-cars">
+        <h2 data-translate="carSearch">Search Cars</h2>
+        <form id="car-search-form">
+            <input type="text" id="pickupLocation" name="pickupLocation" placeholder="Pick-up Location" required>
+            <input type="date" id="pickupDate" name="pickupDate" placeholder="Pick-up Date" required>
+            <input type="time" id="pickupTime" name="pickupTime" placeholder="Pick-up Time" required>
+            <input type="date" id="dropoffDate" name="dropoffDate" placeholder="Drop-off Date" required>
+            <input type="time" id="dropoffTime" name="dropoffTime" placeholder="Drop-off Time" required>
+            <button type="submit" data-translate="submitBtn">Search</button>
+        </form>
+        <div id="filters">
+            <div>
+                <label for="min-price" data-translate="minPrice">Min Price:</label>
+                <input type="number" id="min-price" min="0" step="10">
+            </div>
+            <div>
+                <label for="max-price" data-translate="maxPrice">Max Price:</label>
+                <input type="number" id="max-price" min="0" step="10">
+            </div>
+            <div>
+                <label for="car-type" data-translate="carType">Car Type:</label>
+                <select id="car-type">
+                    <option value="">All</option>
+                    <option value="mini">Mini</option>
+                    <option value="compact">Compact</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="premium">Premium</option>
+                    <option value="economy">Economy</option>
+                    <option value="standard">Standard</option>
+                    <option value="Fullsize">Full Size</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Van">Van</option>
+                    <option value="convertible">Convertible</option>
+                </select>
+            </div>
+            <div>
+                <label for="seats">Number of Seats:</label>
+                <input type="number" id="seats" min="2" max="7">
+            </div>
+            <div>
+                <label for="transmission">Transmission:</label>
+                <select id="transmission">
+                    <option value="">All</option>
+                    <option value="automatic">Automatic</option>
+                    <option value="manual">Manual</option>
+                </select>
+            </div>
+            <div>
+                <label for="fuel-type" data-translate="fuelType">Fuel Type:</label>
+                <select id="fuel-type">
+                    <option value="">All</option>
+                    <option value="gasoline">Gasoline</option>
+                    <option value="electric">Electric</option>
+                    <option value="hybrid">Hybrid</option>
+                </select>
+            </div>
+            <div>
+                <label for="pickup-method" data-translate="pickup">Pickup Method:</label>
+                <select id="pickup-method">
+                    <option value="">All</option>
+                    <option value="normal">Normal</option>
+                    <option value="airport">Airport</option>
+                </select>
+            </div>
+        </div>
+        <div id="search-results" class="search-results"></div>
+        <div id="pagination-controls"></div>
+    </div>
+    <div id="results"></div>
+    <button id="scroll-top-button" class="scroll-top-button">&#x2191;</button>
+    <script type="module" src="../JS/car-search.js"></script>
+</body>
+
+</html>

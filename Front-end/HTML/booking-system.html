@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Booking System</title>
+    <link href="../CSS/booking-system.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <section id="flight-details">
+        <h2 data-translate="flightDetails">Flight Details</h2>
+        <div class="flight">
+            <h3 data-translate="flightNumber">Flight Number: AB123</h3>
+            <p data-translate="Airline"><strong>Airline:</strong></p>
+            <p data-translate="From"><strong>From:</strong></p>
+            <p data-translate="To"><strong>To:</strong></p>
+            <p data-translate="Departure"><strong>Departure:</strong></p>
+            <p data-translate="Arrival"><strong>Arrival:</strong></p>
+            <p data-translate="Duration"><strong>Duration:</strong></p>
+            <p data-translate="Price"><strong>Price:</strong></p>
+            <div class="button-container">
+                <button class="btn" id="return-flight" data-translate="Return">Return</button>
+                <button class="btn" id="check-out-flight" data-translate="Check-out">Check out</button>
+            </div>
+        </div>
+    </section>
+    <section id="hotel-details">
+        <h2 data-translate="hotelDetails">Hotel Details</h2>
+        <div class="hotel">
+            <h3 data-translate="hotelName">Hotel: Bikini Hostel, Cafe & Beer Garden</h3>
+            <p data-translate="Distance"><strong>Distance:</strong></p>
+            <p data-translate="Stars"><strong>Stars:</strong></p>
+            <p data-translate="Price"><strong>Price:</strong></p>
+            <p data-translate="Cheapest-Offer"><strong>Cheapest Offer Partner:</strong></p>
+            <div class="button-container">
+                <button class="btn" id="return-hotel" data-translate="Return">Return</button>
+                <button class="btn" id="check-out-hotel" data-translate="Check-out">Check Out</button>
+            </div>
+        </div>
+    </section>
+    <section id="car-details">
+        <h2 data-translate="carDetails">Car Details</h2>
+        <div class="car">
+            <h3 data-translate="carName">Car: Ford Focus</h3>
+            <p data-translate="class"><strong>Class:</strong> Compact</p>
+            <p data-translate="doors"><strong>Doors:</strong> 4-5</p>
+            <p data-translate="seats"><strong>Seats:</strong> 5</p>
+            <p data-translate="transmission"><strong>Transmission:</strong> Automatic</p>
+            <p data-translate="fuel"><strong>Fuel Type:</strong> Other</p>
+            <p data-translate="price"><strong>Price:</strong> $113.76</p>
+            <div class="button-container">
+                <button class="btn" id="return-car" data-translate="Return">Return</button>
+                <button class="btn" id="check-out-car" data-translate="Check-out">Check out</button>
+            </div>
+        </div>
+    </section>
+    <form id="booking-form" style="display: none;">
+        <h3 data-translate="bookingForm">Booking Form</h3>
+        <div class="page active" id="page-1">
+            <div class="form-group">
+                <label for="passenger-first-name" data-translate="firstName">First Name:</label>
+                <input type="text" id="passenger-first-name" name="first-name" required>
+
+                <label for="passenger-middle-name" data-translate="middleName">Middle Name:</label>
+                <input type="text" id="passenger-middle-name" name="middle-name">
+
+                <label for="passenger-last-name" data-translate="lastName">Last Name:</label>
+                <input type="text" id="passenger-last-name" name="last-name" required>
+            </div>
+
+            <label for="passenger-email" data-translate="email">Email:</label>
+            <input type="email" id="passenger-email" name="email" required>
+
+            <label for="passenger-phone" data-translate="phoneNumber">Phone Number:</label>
+            <input type="tel" id="passenger-phone" name="phone" required>
+
+            <label for="passenger-address" data-translate="address">Address:</label>
+            <input type="text" id="passenger-address" name="address" required>
+
+            <label for="passenger-zip" data-translate="zipCode">Zip Code:</label>
+            <input type="text" id="passenger-zip" name="zip" required>
+
+            <label for="passenger-apartment" data-translate="apartment">Apartment (optional):</label>
+            <input type="text" id="passenger-apartment" name="apartment">
+
+            <button type="button" onclick="nextPage()" data-translate="nextBtn">Next</button>
+        </div>
+        <div class="page" id="page-2" style="display: none;">
+            <label for="credit-card-name" data-translate="cardName">Name on Card:</label>
+            <input type="text" id="credit-card-name" name="cardname" required>
+
+            <label for="credit-card-number" data-translate="cardNumber">Credit Card Number:</label>
+            <input type="text" id="credit-card-number" name="cardnumber" required>
+
+            <label for="credit-card-expiry" data-translate="expiryDate">Expiry Date:</label>
+            <input type="text" id="credit-card-expiry" name="expiry" required>
+
+            <label for="credit-card-cvv" data-translate="CVV">CVV:</label>
+            <input type="text" id="credit-card-cvv" name="cvv" required>
+
+            <button type="button" onclick="nextPage()" data-translate="nextBtn">Next</button>
+        </div>
+        <div class="page" id="page-3" style="display: none;">
+            <label for="additional-info" data-translate="addInfo">Additional Information:</label>
+            <textarea id="additional-info" name="additionalinfo"></textarea>
+
+            <button type="submit" data-translate="confirmBtn">Confirm Booking</button>
+        </div>
+    </form>
+    </div>
+    <button id="scroll-top-button" class="scroll-top-button">↑</button>
+
+    <script type="module" src="../JS/booking-system.js"></script>
+</body>
+
+</html>

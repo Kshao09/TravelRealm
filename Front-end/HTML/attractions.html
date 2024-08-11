@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Attractions</title>
+    <link rel="stylesheet" href="../CSS/attractions.css">
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button" data-translate="homeBtn">Home</a>
+    <div class="container">
+        <h1 data-translate="title">Search for Attractions</h1>
+        <input type="text" id="city" placeholder="Enter a valid city" required>
+        <input type="text" id="state" placeholder="Enter a valid state" required>
+        <select id="typeSelect" required>
+            <option value=""></option>
+            <option value="restaurant">Restaurant</option>
+            <option value="museum">Museum</option>
+            <option value="park">Park</option>
+            <option value="cafe">Cafe</option>
+            <option value="bar">Bar</option>
+            <option value="shopping_mall">Shopping Mall</option>
+            <option value="tourist_attraction">Tourist Attraction</option>
+        </select>
+        <input type="number" id="radius" placeholder="Enter a radius in meters for search range" required>
+        <button id="searchBtn" data-translate="searchBtn">Search</button>
+        <div id="map"></div>
+        <ul id="resultsList"></ul>
+        <div id="pagination-controls"></div>
+    </div>
+    <button id="scroll-top-button" class="scroll-top-button">↑</button>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&loading=async"></script>
+    <script type="module" src="../JS/attractions.js"></script>
+</body>
+
+</html>

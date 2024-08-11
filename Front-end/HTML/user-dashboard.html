@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="">
+    <link rel="stylesheet" href="../CSS/user-dashboard.css">
+</head>
+<body>
+    <div class="info-container">
+        <nav class="navbar sticky-top">
+            <div class="dropdown">
+                <a href="#" class="navbar-link" id="searchLink" data-translate="search">Search  ▾</a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="flight-search.html" data-translate="flights">Flights</a>
+                    <a href="hotel-search.html" data-translate="hotels">Hotels</a>
+                    <a href="car-search.html" data-translate="cars">Cars</a>
+                    <a href="attractions.html" class="navbar-link" id="attractions" data-translate="attractions">Attractions</a>
+                    <a href="currencyConverter.html" class="navbar-link" id="currencyConvert" data-translate="currencyConvert">Currency</a>
+                    <a href="travelInsurance.html" class="navbar-link" id="insurance" data-translate="insurance">Insurance</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="navbar-link" id="exploreLink" data-translate="explore">Explore  ▾</a>
+                <div class="dropdown-content" id="exploreDropdownContent">
+                    <a href="favorites.html" class="navbar-link" id="favorites" data-translate="favorites">Favorites</a>
+                    <a href="travelHistory.html" class="navbar-link" id="booking-history" data-translate="bookingHistory">Travel History</a>
+                </div>
+            </div>
+            <a href="travelBlog.html" id="travelBlog" data-translate="travelBlog">Travel Blog</a>
+            <a href="loyaltyProgram.html" id="loyaltyProgram" data-translate="loyaltyProgram">Loyalty Program</a>
+            <a href="#" class="navbar-link" id="logoutButton" data-translate="logOutBtn">Log Out</a>
+        </nav>
+
+        <div class="dashboard-container">
+            <div class="dashboard-top">
+                <h2 id="header" data-translate="headerText"></h2>
+                <a href="../HTML/user-profile.html">
+                    <img src="../IMG/UserPic.PNG" alt="Profile picture" id="profilePic">
+                </a>
+            </div>
+            <div class="userContainer">
+                <div class="leftSideContainer">
+                    <div id="world-map-kpi" class="content-section">World Map Content</div>
+                    <div id="weather" class="content-section">
+                        <form id="weatherForm">
+                            <input type="text" id="cityInput" placeholder="Enter city name">
+                        </form>   
+                        <div id="weatherResults" style="display: none;"></div>         
+                    </div>
+                </div>
+                <div class="rightSideContainer">
+                    <div class="calendar">
+                        <div id="month">
+                            <button id="prev">&#10094;</button>
+                            <h2 id="month-name"></h2>
+                            <button id="next">&#10095;</button>
+                        </div>
+                        <div id="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div id="days"></div>
+                    </div>
+                    <div class="support">
+                        <h2 data-translate="supportTitle">Customer Support</h2>
+                        <p data-translate="supportText">Please fill out the form below with your inquiry:</p>
+                        <form id="issue-complaint">
+                            <label for="issue" data-translate="issueText">Issue:</label>
+                            <select id="issue" name="issue">
+                                <option value=""></option>
+                                <option value="booking" data-translate="bookingText">Booking</option>
+                                <option value="refund" data-translate="refundText">Refund</option>
+                                <option value="flight_change" data-translate="flightChangeText">Flight Change</option>
+                            </select>
+
+                            <label for="name" data-translate="nameText">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email" data-translate="emailText">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="details" data-translate="detailText">Details:</label>
+                            <textarea id="details" name="details" rows="4" required></textarea>
+
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>  
+                </div>    
+                <button id="scroll-top-button" class="scroll-top-button">&#x2191;</button>
+            </div>
+        </div>
+        <footer><p>&copy; 2024 Airplane. All Rights Reserved</p></footer>
+    </div>
+
+    <script src="../JS/search-weather.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjevw2gvkH7lBEJ8u_icoYmwfQUlcty6A&loading=async"></script>
+    <script type="module" src="../JS/user-dashboard.js"></script>
+</body>
+</html>

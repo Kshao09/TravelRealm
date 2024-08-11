@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Hotel Search</title>
+    <link href="../CSS/hotel-search.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button">Home</a>
+    <div class="search-hotels">
+        <h2 data-translate="searchHotels">Search Hotels</h2>
+        <form id="hotel-search-form">
+            <input type="text" id="destination" name="destination" placeholder="Destination">
+            <input type="date" id="checkIn" name="checkIn" placeholder="Check-in Date">
+            <input type="date" id="checkOut" name="checkOut" placeholder="Check-out Date">
+            <input type="number" id="guests" name="guests" placeholder="Number of Guests">
+            <input type="number" id="rooms" name="rooms" placeholder="Number of Rooms" required>
+            <button type="submit" data-translate="searchBtn">Search</button>
+        </form>
+        <div class="filters">
+            <label for="min-price" data-translate="minPrice">Min Price:</label>
+            <input type="number" id="min-price" name="min-price" min="0" max="10000" value="0">
+
+            <label for="max-price" data-translate="maxPrice">Max Price:</label>
+            <input type="number" id="max-price" name="max-price" min="0" max="10000" value="10000">
+
+            <label for="star-rating" data-translate="star">Star Rating:</label>
+            <select id="star-rating" name="star-rating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+
+            <input type="checkbox" id="wifi" name="amenities" value="wifi"> Free Wi-Fi
+            <input type="checkbox" id="breakfast" name="amenities" value="breakfast"> Breakfast included
+        </div>
+        <div id="search-results" class="search-results"></div>
+        <div id="pagination-controls"></div>
+    </div>
+    <div id="results"></div>
+    <button id="scroll-top-button" class="scroll-top-button">&#x2191;</button>
+    <script type="module" src="../JS/hotel-search.js"></script>
+</body>
+
+</html>

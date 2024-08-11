@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Forum</title>
+    <link rel="stylesheet" href="../CSS/travelBlog.css">
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button">Home</a>
+    <header>
+        <h1>Travel Forum</h1>
+    </header>
+
+    <section id="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="#" data-category="All">All</a></li>
+            <li><a href="#" data-category="General">General</a></li>
+            <li><a href="#" data-category="Destinations">Destinations</a></li>
+            <li><a href="#" data-category="Tips">Tips</a></li>
+            <li><a href="#" data-category="Experiences">Experiences</a></li>
+        </ul>
+    </section>
+
+    <section id="forum">
+        <h2>Share Your Travel Experiences</h2>
+        <p>Chat with other travelers, upload your favorite photos, and share your travel stories.</p>
+        <div id="forum-container"></div>
+        <div id="new-post-container">
+            <input type="text" id="new-post-username" placeholder="Your Name">
+            <select id="new-post-category">
+                <option value="General">General</option>
+                <option value="Destinations">Destinations</option>
+                <option value="Tips">Tips</option>
+                <option value="Experiences">Experiences</option>
+            </select>
+            <textarea id="new-post-content" placeholder="Enter your post content"></textarea>
+            <input type="file" id="new-post-image" multiple>
+            <button id="new-post-button">Post</button>
+        </div>
+    </section>
+    <button id="scroll-top-button" class="scroll-top-button">↑</button>
+
+    <script type="module" src="../JS/travelBlog.js"></script>
+</body>
+
+</html>

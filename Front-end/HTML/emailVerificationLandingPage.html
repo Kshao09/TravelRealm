@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="../CSS/emailVerificationLandingPage.css">
+</head>
+
+<body>
+    <div id="loading" class="content-container">
+        <p>Loading...</p>
+    </div>
+    <div id="verification-fail" class="content-container" style="display: none;">
+        <h1>Uh oh!</h1>
+        <p>Something went wrong while trying to verify your email...</p>
+        <button onclick="goToSignUp()">Back to Sign-Up</button>
+    </div>
+    <div id="verification-success" class="content-container" style="display: none;">
+        <h1>Success!</h1>
+        <p>Thanks for verifying your email, now you can use all the app's features</p>
+        <button onclick="goToDashboard()">Go to home page</button>
+    </div>
+
+    <script src="../JS/emailVerificationLandingPage.js"></script>
+</body>
+
+</html>

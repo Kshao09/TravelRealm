@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="../CSS/user-profile.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button" data-translate="homeBtn">Home</a>
+    <section id="user-profile">
+        <h2 data-translate="profile">User Profile</h2>
+        <form id="profile-form">
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="profile-name" data-translate="nameText">Name:</label>
+                    <input type="text" id="profile-name" required>
+                </div>
+                <div class="form-item">
+                    <label for="profile-email" data-translate="emailText">Email:</label>
+                    <input type="email" id="profile-email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="profile-birthday" data-translate="birthdayText">Birthday:</label>
+                    <input type="date" id="profile-birthday" required>
+                </div>
+                <div class="form-item">
+                    <label for="profile-nationality" data-translate="nationalityText">Nationality:</label>
+                    <input type="text" id="profile-nationality" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="profile-tier" data-translate="tierText">Loyalty Tier:</label>
+                    <input type="text" id="profile-tier" readonly>
+                </div>
+                <div class="form-item">
+                    <label for="profile-picture" data-translate="pictureText">Profile Picture:</label>
+                    <input type="file" id="profile-picture" accept="image/*">
+                    <img id="profile-picture-preview" src="" alt="Profile Picture Preview" style="display: none;">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="notifications" data-translate="notificationsText">Notifications:</label>
+                    <select id="notifications" name="notifications" required>
+                        <option value="enabled" data-translate="enableText">Enabled</option>
+                        <option value="disabled" data-translate="disableText">Disabled</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="language-select" data-translate="settings">Select Language:</label>
+                    <select id="language-select">
+                        <option value="en" data-translate="english">English</option>
+                        <option value="es" data-translate="spanish">Spanish</option>
+                        <option value="fr" data-translate="french">French</option>
+                        <option value="de" data-translate="german">German</option>
+                        <option value="it" data-translate="italian">Italian</option>
+                        <option value="pt" data-translate="portuguese">Portuguese</option>
+                        <option value="zh" data-translate="chinese">Mandarin</option>
+                        <option value="ja" data-translate="japanese">Japanese Language</option>
+                        <option value="ko" data-translate="korean">Korean Language</option>
+                        <option value="ru" data-translate="russian">Russian</option>
+                        <option value="ar" data-translate="arabic">Arabic</option>
+                        <option value="hi" data-translate="hindi">Hindi</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" id="save-changes" data-translate="saveText">Save Changes</button>
+            <button class="btn" type="button" id="deleteAccount" data-translate="deleteText">Delete Account</button>
+        </form>
+    </section>
+
+    <script type="module" src="../JS/user-profile.js"></script>
+</body>
+
+</html>

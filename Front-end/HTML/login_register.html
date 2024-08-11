@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration</title>
+    <link href="../CSS/login_register.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="login-form" class="form-container active">
+            <h2>Login</h2>
+            <form method="post">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit" class="button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-register">Register Here</a></p>
+            <p>Forgot Your Password? <a href="forgotPasswordPage.html">Reset Password</a></p>
+        </div>
+
+        <div id="register-form" class="form-container">
+            <h2>Register</h2>
+            <form method="post">
+                <label for="register-name">Name:</label>
+                <input type="name" id="register-name" name="name" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                <div class="flex-container">
+                    <div>
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div>
+                        <label for="register-birthday">Birth Date:</label>
+                        <input type="date" id="register-birthday" name="birthday" required>
+                    </div>
+                    <div>
+                        <label for="register-birthday">Nationality:</label>
+                        <select type="ethnicity" id="register-ethnicity" name="ethnicity" required>
+                            <option value="">Select your ethnicity</option>
+                            <option value="asian">Asian</option>
+                            <option value="black">Black</option>
+                            <option value="hispanic">Hispanic</option>
+                            <option value="white">White</option>
+                            <option value="native_american">Native American</option>
+                            <option value="pacific_islander">Pacific Islander</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="button">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login Here</a></p>
+        </div>
+        <button id="googleLoginButton" class="button">Login with Google</button>
+    </div>
+
+    <script type="module" src="/JS/Auth/jwtHandler.js"></script>
+    <script type="module" src="/JS/Auth/OAuthHandler.js"></script>
+    <script type="module" src="/JS/Auth/errorHandler.js"></script>
+    <script type="module" src="../JS/login_register.js"></script>
+</body>
+
+</html>

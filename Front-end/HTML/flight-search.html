@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Flight Search</title>
+    <link href="../CSS/flight-search.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <a href="../HTML/user-dashboard.html" class="home-button" data-translate="homeBtn">Home</a>
+    <section id="search-flights">
+        <h2 data-translate="flightSearch">Search Flights</h2>
+        <div id="trip-type-selection">
+            <label>
+                <input type="radio" name="tripType" value="one-way" checked> One Way
+            </label>
+            <label>
+                <input type="radio" name="tripType" value="round-trip"> Round Trip
+            </label>
+        </div>
+        <form id="flight-search-form-one-way">
+            <input type="text" id="from-one-way" placeholder="From (IATA Code)" required>
+            <input type="text" id="to-one-way" placeholder="To (IATA Code)" required>
+            <input type="date" id="departure-date-one-way" required>
+            <button type="submit" data-translate="searchBtn">Search</button>
+        </form>
+        <form id="flight-search-form-round-trip">
+            <input type="text" id="from-round-trip" placeholder="From (IATA Code)" required>
+            <input type="text" id="to-round-trip" placeholder="To (IATA Code)" required>
+            <input type="date" id="departure-date-round-trip" required>
+            <input type="date" id="return-date" required>
+            <button type="submit" data-translate="searchBtn">Search</button>
+        </form>
+        <div id="filters">
+            <div>
+                <label for="min-price" data-translate="minPrice">Min Price:</label>
+                <input type="number" id="min-price" min="0" step="10">
+            </div>
+            <div>
+                <label for="max-price" data-translate="maxPrice">Max Price:</label>
+                <input type="number" id="max-price" min="0" step="10">
+            </div>
+            <div>
+                <label for="airline" data-translate="airline">Airline:</label>
+                <select id="airline">
+                    <option value="">All</option>
+                    <option value="American Airlines">American Airline</option>
+                    <option value="United">United Airline</option>
+                    <option value="Delta">Delta Airline</option>
+                    <option value="Spirit Airlines">Spirit Airline</option>
+                    <option value="jetBlue">JetBlue</option>
+                    <option value="Air Canada">Air Canada</option>
+                    <option value="Turkish Airlines">Turkish Airline</option>
+                    <option value="Frontier Airlines">Frontier Airline</option>
+                    <option value="LOT">LOT</option>
+                </select>
+            </div>
+            <div>
+                <label for="stops" data-translate="stops">Number of Stops:</label>
+                <select id="stops">
+                    <option value="">All</option>
+                    <option value="0">Non-stop</option>
+                    <option value="1">1 Stop</option>
+                    <option value="2">2+ Stops</option>
+                </select>
+            </div>
+            <div>
+                <label for="departure-time" data-translate="departure">Departure Time:</label>
+                <input type="time" id="departure-time">
+            </div>
+        </div>
+        <div id="search-results" class="search-results"></div>
+        <div id="pagination-controls"></div>
+    </section>
+    <div id="results"></div>
+    <button id="scroll-top-button" class="scroll-top-button">↑</button>
+
+    <script type="module" src="../JS/flight-search.js"></script>
+</body>
+
+</html>
