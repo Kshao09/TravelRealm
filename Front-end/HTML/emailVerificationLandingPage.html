@@ -15,15 +15,15 @@
     <div id="verification-fail" class="content-container" style="display: none;">
         <h1>Uh oh!</h1>
         <p>Something went wrong while trying to verify your email...</p>
-        <button onclick="goToSignUp()">Back to Sign-Up</button>
+        <button id="signup">Back to Sign-Up</button>
     </div>
     <div id="verification-success" class="content-container" style="display: none;">
         <h1>Success!</h1>
         <p>Thanks for verifying your email, now you can use all the app's features</p>
-        <button onclick="goToDashboard()">Go to home page</button>
+        <button id="dashboard">Go to home page</button>
     </div>
 
-    <script src="../JS/emailVerificationLandingPage.js"></script>
+    <script type="module" src="../JS/emailVerificationLandingPage.js"></script>
 </body>
 
 </html>
