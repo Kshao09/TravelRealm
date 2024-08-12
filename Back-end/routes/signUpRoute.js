@@ -42,7 +42,7 @@ export const signUpRoute = {
                 from: 'Kshao001@fiu.edu',
                 subject: "Please verify your email",
                 text: `Thanks for signing up! To verify, please click here: 
-                    http://localhost:3000/verify-email/${verificationString}
+                    http://localhost:8080/verify-email/${verificationString}
                 `,
             });
         } catch (error) {

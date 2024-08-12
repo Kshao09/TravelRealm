@@ -6,10 +6,10 @@ const { ObjectId } = pkg;
 import { getDbConnection } from '../db.js';
 
 export const verifyEmailRoute = {
-    path: '/api/verify-email',
-    method: "PUT",
+    path: '/api/verify-email/:verificationString',
+    method: "GET",
     handler: async (req, res) => {
-        const { verificationString } = req.body;
+        const { verificationString } = req.params;
 
         const db = getDbConnection("react-auth-db");
         const result = await db.collection('users').findOne({
