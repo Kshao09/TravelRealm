@@ -35,3 +35,27 @@ initializeDbConnection()
     .catch(err => {
         console.error('Failed to connect to the database', err);
     });
+
+    const shutdown = () => {
+        if (server) {
+            server.close(() => {
+                console.log('Server closed');
+                process.exit(0);
+            });
+        } else {
+            process.exit(0);
+        }
+    };
+    
+    process.on('SIGINT', shutdown);
+    process.on('SIGTERM', shutdown);
+
+    process.on('uncaughtException', (err) => {
+        console.error('Uncaught exception:', err);
+        shutdown();
+    });
+    
+    process.on('unhandledRejection', (reason, promise) => {
+        console.error('Unhandled rejection at:', promise, 'reason:', reason);
+        shutdown();
+    });
