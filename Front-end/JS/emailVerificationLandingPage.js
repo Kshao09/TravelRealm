@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const verificationString = urlParams.get('verificationString');
+    const URLParts = window.location.pathname.split("/");
+    const verificationString = URLParts[URLParts.length - 1];
 
     if (!verificationString) {
         displayFail();
@@ -12,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function verifyEmail(verificationString) {
-    fetch('http://localhost:8080/api/verify-email', {
-        method: 'PUT',
+    fetch(`http://localhost:8080/api/verify-email/${verificationString}`, {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const profileName = document.getElementById('profile-name');
     const profileEmail = document.getElementById('profile-email');
     const profileBirthday = document.getElementById('profile-birthday');
-    const profileNationality = document.getElementById('profile-nationality');
+    const profileEthnicity = document.getElementById('profile-ethnicity');
     const profileTier = document.getElementById('profile-tier');
     const profilePicture = document.getElementById('profile-picture');
     const profilePicturePreview = document.getElementById('profile-picture-preview');
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             profileName.value = userInfo.info.name || '';
             profileEmail.value = userInfo.email || '';
-            profileBirthday.value = userInfo.birthday || '';
-            profileNationality.value = userInfo.nationality || '';
+            profileBirthday.value = userInfo.info.birthday || '';
+            profileEthnicity.value = userInfo.info.ethnicity || '';
             profileTier.value = userInfo.tier || 'Basic';
             notifications.value = userInfo.notifications || 'disabled';
 

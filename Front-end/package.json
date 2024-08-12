@@ -1,0 +1,38 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Travel Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server --port=3000"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kshao09/TravelRealm.git"
+  },
+  "keywords": [
+    "travel",
+    "website",
+    "booking",
+    "tourism"
+  ],
+  "author": "Kenny Shao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kshao09/TravelRealm/issues"
+  },
+  "homepage": "https://github.com/Kshao09/TravelRealm#readme",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "braces": "^3.0.3",
+    "chokidar": "^3.6.0",
+    "circular-json": "^0.5.9",
+    "dotenv": "^16.4.5",
+    "live-server": "^1.2.2"
+  }
+}
