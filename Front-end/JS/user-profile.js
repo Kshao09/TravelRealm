@@ -175,35 +175,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
-    const deleteAccountBtn = document.getElementById('deleteAccount');
-
-    if (deleteAccountBtn) {
-        deleteAccountBtn.addEventListener('click', async function() {
-            if (confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
-                try {
-                    const token = JWTHandler.getToken();
-                    const userId = JWTHandler.getUserIdFromToken(token);
-
-                    const response = await fetch(`http://localhost:8080/api/users/${userId}`, {
-                        method: "DELETE",
-                        headers: {
-                            "Authorization": `Bearer ${token}`,
-                        },
-                    })
-
-                    if (!response.ok) {
-                        throw new Error("Failed to delete account");
-                    }
-
-                    JWTHandler.clearToken();
-                } catch (error) {
-                    errorHandler.displayError(error);
-                    errorHandler.showErrorToUser(error.message);
-                }
-            }
-        });
-    }
-
     const apiKey = 'AIzaSyDJr8pK1DDoOPSiFf9P2leCvQwdmFr2iiw';
 
     const preferredLanguage = localStorage.getItem('preferredLanguage');
