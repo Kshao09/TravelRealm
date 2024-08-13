@@ -1,11 +1,10 @@
 import { signUpRoute } from './signUpRoute.js';
 import { loginRoute } from './loginRoute.js';
-import { updateUserInfoRoute } from './updateUserInfoRoute.js';
 import { sendEmailRoute } from './sendEmailRoute.js';
 import { refreshTokenRoute } from './refreshTokenRoute.js';
 import { logoutRoute } from './logoutRoute.js';
+import { updateUserInfoRoute } from './updateUserInfoRoute.js';
 import { getUserInfoRoute } from './getUserInfoRoute.js';
-import { deleteUserRoute } from './deleteUserRoute.js';
 import { verifyEmailRoute } from './verifyEmailRoute.js';
 import { forgotPasswordRoute } from './forgotPasswordRoute.js';
 import { resetPasswordRoute } from './resetPasswordRoute.js';
@@ -25,7 +24,6 @@ export const routes = [
     updateUserInfoRoute,
     getUserInfoRoute,
     refreshTokenRoute,
-    deleteUserRoute,
     logoutRoute,
     sendEmailRoute,
     verifyEmailRoute,
